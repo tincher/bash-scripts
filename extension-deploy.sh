@@ -1,4 +1,5 @@
 #!/bin/bash
+# zip extension files
 
 function zip_for_browser() {
 	echo "Zipping for $1"
