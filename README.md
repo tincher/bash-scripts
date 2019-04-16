@@ -2,4 +2,6 @@
 
 Name | Description | Usage
 --- | --- | ---
-extension-deploy.sh | zips extension files suitable | `-c` zips for chrome , `-f` zips for firefox , `-cf` 
+clonemyrepo | shortcut to clone your own repos | clonemyrepo `reponame` `options` `directory`
+<!-- deploymyscripts | deploy all scripts in the current directory  |  -->
+extension-deploy | zips extension files suitable | `-c` chrome , `-f` firefox , `-cf` both
