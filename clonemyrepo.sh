@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # clone the repo in the argument from your github
 
+#https://api.github.com/users/username/repos
+
 readonly CONFIG_FILE=/etc/clonemyrepo/github.conf
 . $CONFIG_FILE
 
@@ -17,6 +19,7 @@ set_config() {
 }
 
 main() {
+	#todo get
 	if [[ $1 == "set" ]]
 	then
 		set_config "${@:2}"
