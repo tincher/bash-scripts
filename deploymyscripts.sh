@@ -5,7 +5,7 @@ main() {
 	CONFIG_FILE=$CONFIG_DIR/deploymyscripts.conf
 	if [[ ! -d  $CONFIG_DIR ]]
 	then
-		mkdir $CONFIG_DIR && cd $CONFIG_DIR && touch $CONFIG_FILE
+		mkdir $CONFIG_DIR && touch $CONFIG_FILE
 		echo "name=init" > $CONFIG_FILE
 	fi
 	for file in $PWD/*.sh
