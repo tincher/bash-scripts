@@ -10,9 +10,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                dir('./bash-scripts'){
-                    sh './deploymyscripts.sh'
-                }
+                sh './deploymyscripts.sh'
             }
         }
     }
