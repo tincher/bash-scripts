@@ -11,10 +11,16 @@ clone() {
 }
 
 set_config() {
+	if [[ "$OSTYPE" == "darwin"* ]]
+	then
+		streameditor=gsed
+	else
+		streameditor=sed
+	fi
 	if [[ "$(cat $CONFIG_FILE | grep -c $1)" -gt 0 ]]
 	then
-		gsed -i'.original' "s/$1.*$/$1=$2/gp" $CONFIG_FILE
-		gsed -i'.original' "$!N; /^\(.*\)\n\1$/!P; D" $CONFIG_FILE
+		$streameditor -i'.original' "s/$1.*$/$1=$2/gp" $CONFIG_FILE
+		$streameditor -i'.original' "$!N; /^\(.*\)\n\1$/!P; D" $CONFIG_FILE
 	fi
 }
 
