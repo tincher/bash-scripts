@@ -3,7 +3,7 @@
 
 #https://api.github.com/users/username/repos
 
-readonly CONFIG_FILE=/etc/clonemyrepo/github.conf
+readonly CONFIG_FILE=/etc/mybashscripts/deploymyscripts.conf
 . $CONFIG_FILE
 
 clone() {
