@@ -6,7 +6,7 @@ zip_for_browser() {
 	echo 'Done'
 }
 
-function main() {
+main() {
 	if [[ $1 == -*c* ]]
 	then
 		zip_for_browser chrome
